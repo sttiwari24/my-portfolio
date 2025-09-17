@@ -38,11 +38,11 @@ export default function Portfolio() {
       </AppBar>
 
       {/* Hero Section */}
-      <Container sx={{ textAlign: "center", mt: 8, mb: 8 }}>
-        <Typography variant="h2" component="h1" gutterBottom>
+      <Container sx={{ textAlign: "center", mt: { xs: 6, md: 12 }, mb: { xs: 6, md: 12 } }}>
+        <Typography variant="h2" component="h1" gutterBottom sx={{ fontSize: { xs: "2rem", md: "3rem" } }}>
           Hi, I'm <span style={{ color: "#fbc02d" }}>Shubham Tiwari</span>
         </Typography>
-        <Typography variant="h5" gutterBottom>
+        <Typography variant="h5" gutterBottom sx={{ fontSize: { xs: "1rem", md: "1.5rem" } }}>
           Full Stack Developer | React | Node.js | MongoDB
         </Typography>
         <Button
@@ -56,7 +56,7 @@ export default function Portfolio() {
       </Container>
 
       {/* About Section */}
-      <Container id="about" sx={{ mt: 8, mb: 8, textAlign: "center" }}>
+      <Container id="about" sx={{ mt: { xs: 6, md: 12 }, mb: { xs: 6, md: 12 }, textAlign: "center" }}>
         <Typography variant="h4" gutterBottom>
           About Me
         </Typography>
@@ -68,18 +68,19 @@ export default function Portfolio() {
       </Container>
 
       {/* Projects Section */}
-      <Container id="projects" sx={{ mt: 8, mb: 8 }}>
+      <Container id="projects" sx={{ mt: { xs: 6, md: 12 }, mb: { xs: 6, md: 12 } }}>
         <Typography variant="h4" align="center" gutterBottom>
           Projects
         </Typography>
         <Stack
           direction={{ xs: "column", md: "row" }}
-          spacing={4}
+          spacing={{ xs: 4, md: 4 }}
           justifyContent="center"
           alignItems="stretch"
+          sx={{ px: { xs: 2, md: 0 } }}
         >
           {/* Project 1 */}
-          <Card sx={{ width: 300 }}>
+          <Card sx={{ width: { xs: "100%", md: 300 } }}>
             <CardContent>
               <Typography variant="h6">SportsPro Platform</Typography>
               <Typography sx={{ mt: 1 }}>
@@ -101,7 +102,7 @@ export default function Portfolio() {
           </Card>
 
           {/* Project 2 */}
-          <Card sx={{ width: 300 }}>
+          <Card sx={{ width: { xs: "100%", md: 300 } }}>
             <CardContent>
               <Typography variant="h6">Portfolio Website</Typography>
               <Typography sx={{ mt: 1 }}>
@@ -123,7 +124,7 @@ export default function Portfolio() {
           </Card>
 
           {/* Project 3 */}
-          <Card sx={{ width: 300 }}>
+          <Card sx={{ width: { xs: "100%", md: 300 } }}>
             <CardContent>
               <Typography variant="h6">ProfitNest</Typography>
               <Typography sx={{ mt: 1 }}>
@@ -147,11 +148,11 @@ export default function Portfolio() {
       </Container>
 
       {/* Skills Section */}
-      <Container id="skills" sx={{ mt: 8, mb: 8, textAlign: "center" }}>
+      <Container id="skills" sx={{ mt: { xs: 6, md: 12 }, mb: { xs: 6, md: 12 }, textAlign: "center" }}>
         <Typography variant="h4" gutterBottom>
           Skills
         </Typography>
-        <Box display="flex" justifyContent="center" gap={4} mt={2}>
+        <Box display="flex" justifyContent="center" gap={4} mt={2} flexWrap="wrap">
           <IconButton color="warning">
             <Code fontSize="large" titleAccess="React" />
           </IconButton>
@@ -162,12 +163,12 @@ export default function Portfolio() {
       </Container>
 
       {/* Contact Section */}
-      <Container id="contact" sx={{ mt: 8, mb: 8, textAlign: "center" }}>
+      <Container id="contact" sx={{ mt: { xs: 6, md: 12 }, mb: { xs: 6, md: 12 }, textAlign: "center" }}>
         <Typography variant="h4" gutterBottom>
           Contact Me
         </Typography>
-        <Box display="flex" justifyContent="center" gap={4} mt={2}>
-          <IconButton href="shubhamtiwari24092001@gmail.com">
+        <Box display="flex" justifyContent="center" gap={4} mt={2} flexWrap="wrap">
+          <IconButton href="mailto:shubhamtiwari24092001@gmail.com">
             <Email fontSize="large" />
           </IconButton>
           <IconButton href="https://github.com/sttiwari24" target="_blank">
